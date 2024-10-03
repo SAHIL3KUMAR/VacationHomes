@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
-import { jwtDecode } from 'jwt-decode'; 
+// import { jwtDecode } from 'jwt-decode'; 
 import { sampleProperties } from '../dummyData'; 
 
 const DashboardContainer = styled.div`
@@ -50,8 +50,8 @@ const Dashboard = () => {
       try {
         const token = localStorage.getItem('token');
 
-        const decodedToken = jwtDecode(token);
-        const userId = decodedToken.userId; 
+        // const decodedToken = jwtDecode(token);
+        // const userId = decodedToken.userId; 
 
         const headers = { Authorization: `Bearer ${token}` };
 
